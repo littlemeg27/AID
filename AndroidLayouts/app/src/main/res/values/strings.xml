@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AndroidLayouts</string>
+    <string name="name">Brenna Katherine Pavlinchak</string>
+    <string name="birthday_label">Birthday</string>
+    <string name="birthday_value">August 27, 1987</string>
+    <string name="birthday_full">Birthday: August 27, 1987</string>
+    <string name="hometown_label">Hometown</string>
+    <string name="hometown_value">Rock Hill</string>
+    <string name="hobbies_label">Hobbies</string>
+    <string name="hobbies_value">Coding, Swimming, Kayaking, Listening to Music</string>
+    <string name="about_me_label">About Me</string>
+    <string name="about_me_value">I reside in Charlotte, NC, where I work full-time as an IT Help Desk Specialist for Spectrum. Additionally, I am furthering my education at Full Sail University.</string>
+    <string name="switch_layout">Switch Layout</string>
+    <string name="profile_picture_desc">Profile Picture</string>
+</resources>

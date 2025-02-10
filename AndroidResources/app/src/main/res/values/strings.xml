@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidResources</string>
+    <string name="title_introduction">Introduction</string>
+    <string name="text_introduction">Alpacas are domesticated South American camelids related to the llama, originally from the Andes region. They are primarily raised for their soft, luxurious fleece which is used to make high-quality garments. Alpacas are smaller than llamas, with a more delicate build and a friendly disposition.</string>
+    <string name="title_summary">Summary</string>
+    <string name="text_summary">Alpaca wool is hypoallergenic, warm, and soft, making it ideal for clothing. Alpacas come in 22 natural colors, from black through various shades of brown and gray to white. They are social animals, living in herds, and require less land than sheep or cattle, making them an environmentally friendly choice for farming.</string>
+    <string name="title_conclusion">Conclusion</string>
+    <string name="text_conclusion">The alpaca industry has grown globally, with alpacas now found in countries like the United States, Australia, and New Zealand. Their gentle nature, along with their low impact on the environment, has made alpaca farming a popular choice for those interested in sustainable and ethical animal husbandry.</string>
+</resources>

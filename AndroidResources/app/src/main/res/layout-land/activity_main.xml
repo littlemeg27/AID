@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/backgroundColor">
+
+    <!-- Header Image on Left -->
+    <ImageView
+        android:id="@+id/imageHeader"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@drawable/header_image"/>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Introduction Section -->
+            <TextView
+                android:id="@+id/titleIntroduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_introduction"
+                android:textSize="22sp"
+                android:textColor="@color/titleColor"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textIntroduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_introduction"
+                android:textSize="16sp"
+                android:textColor="@color/bodyTextColor"
+                android:paddingBottom="10dp"/>
+
+            <!-- Summary Section -->
+            <TextView
+                android:id="@+id/titleSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_summary"
+                android:textSize="22sp"
+                android:textColor="@color/titleColor"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_summary"
+                android:textSize="16sp"
+                android:textColor="@color/bodyTextColor"
+                android:paddingBottom="10dp"/>
+
+            <!-- Conclusion Section -->
+            <TextView
+                android:id="@+id/titleConclusion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_conclusion"
+                android:textSize="22sp"
+                android:textColor="@color/titleColor"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textConclusion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_conclusion"
+                android:textSize="16sp"
+                android:textColor="@color/bodyTextColor"
+                android:paddingBottom="10dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
