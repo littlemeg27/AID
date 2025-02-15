@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- General Theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+    </style>
+
+    <!-- Portrait-specific styles -->
+    <style name="FrameLayoutPortrait">
+        <item name="android:background">@color/frameBackground</item>
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">200dp</item>
+    </style>
+
+    <style name="TextTitlePortrait">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="EditTextPortrait">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Landscape-specific styles -->
+    <style name="FrameLayoutLandscape">
+        <item name="android:background">@color/frameBackground</item>
+        <item name="android:layout_width">275dp</item>
+        <item name="android:layout_height">275dp</item>
+    </style>
+
+    <style name="TextTitleLandscape">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:layout_marginTop">30dp</item>
+    </style>
+
+    <style name="EditTextLandscape">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- RadioButton styles -->
+    <style name="RadioButtonStyle">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Switch styles -->
+    <style name="SwitchStyle">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>
