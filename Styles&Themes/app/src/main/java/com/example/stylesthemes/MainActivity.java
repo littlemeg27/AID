@@ -13,6 +13,10 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
+// Brenna Pavlinchak
+// AID - C202502
+// MainActivity
+
 public class MainActivity extends AppCompatActivity
 {
     private FrameLayout frameLayout;

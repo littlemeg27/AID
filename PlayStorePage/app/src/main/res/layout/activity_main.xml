@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Image -->
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/header_placeholder" />
+
+        <!-- App Icon and Name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/app_icon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/app_placeholder" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/app_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="App Name"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/developer_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Developer Name"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/uninstall_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="UNINSTALL"
+                android:textColor="@android:color/black"
+                android:background="@drawable/button_uninstall" />
+
+            <Button
+                android:id="@+id/open_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="OPEN"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_open" />
+        </LinearLayout>
+
+        <!-- App Description -->
+        <TextView
+            android:id="@+id/app_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="App description / unique value proposition" />
+
+        <!-- What's New -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/whats_new_background"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WHAT'S NEW"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/whats_new_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Content goes here" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="READ MORE"
+                android:textColor="@color/link_color" />
+        </LinearLayout>
+
+        <!-- App Screenshots -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="App Screenshots"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <!-- Placeholder for screenshots -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Add your screenshot views here -->
+
+        </LinearLayout>
+
+        <!-- Reviews -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/all_reviews_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ALL REVIEWS"
+            android:textColor="@color/link_color"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="16dp" />
+
+        <!-- Developer section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/developer_section_background"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DEVELOPER"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/send_email_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send email"
+                android:textColor="@color/link_color"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="8dp" />
+
+            <Button
+                android:id="@+id/permission_details_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Permission details"
+                android:textColor="@color/link_color"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="8dp" />
+
+            <Button
+                android:id="@+id/flag_inappropriate_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Flag as inappropriate"
+                android:textColor="@color/link_color"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
