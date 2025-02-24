@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">PlayStorePage</string>
+    <string name="developer_name">Developer Name</string>
+    <string name="app_description">App description / unique value proposition</string>
+    <string name="whats_new_title">WHAT\'S NEW</string>
+    <string name="whats_new_content">Content goes here</string>
+    <string name="read_more">READ MORE</string>
+    <string name="app_screenshots_title">App Screenshots</string>
+    <string name="all_reviews_button">ALL REVIEWS</string>
+    <string name="developer_title">DEVELOPER</string>
+    <string name="send_email_button">Send email</string>
+    <string name="permission_details_button">Permission details</string>
+    <string name="flag_inappropriate_button">Flag as inappropriate</string>
+    <string name="uninstall_button">UNINSTALL</string>
+    <string name="open_button">OPEN</string>
+    <string name="header_image_desc">App header image</string>
+    <string name="app_icon_desc">App icon</string>
+    <string name="uninstall_button_desc">Uninstall the app</string>
+    <string name="open_button_desc">Open the app</string>
+    <string name="review_user_placeholder">User Name</string>
+    <string name="review_date_placeholder">Review Date</string>
+    <string name="review_title_placeholder">Review Title</string>
+    <string name="review_summary_placeholder">Review Summary</string>
+    <string name="review_rating_placeholder">Rating</string>
+    <string name="app_title">New App!</string>
 </resources>

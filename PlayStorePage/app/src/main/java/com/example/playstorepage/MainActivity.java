@@ -31,10 +31,11 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(reviewAdapter);
 
+        // Add reviews directly; no need to call setReviews again
         reviewList.add(new Review("User 1", "Awesome app", 5, "2025-02-16", "I love using this app!"));
         reviewList.add(new Review("User 2", "Not bad", 3, "2025-02-15", "It works fine, but could be better."));
         reviewList.add(new Review("User 3", "Terrible", 1, "2025-02-14", "App crashes all the time!"));
 
-        reviewAdapter.setReviews(reviewList);
+        reviewAdapter.notifyDataSetChanged(); // Notify adapter of data changes
     }
 }

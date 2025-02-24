@@ -7,7 +7,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <!-- Header Image -->
         <ImageView
@@ -15,7 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/header_placeholder" />
+            android:src="@drawable/header_placeholder"
+            android:contentDescription="@string/header_image_desc"
+            android:background="#FF000000" />
 
         <!-- App Icon and Name -->
         <LinearLayout
@@ -28,20 +31,22 @@
                 android:id="@+id/app_icon"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:src="@drawable/app_placeholder" />
+                android:src="@drawable/app_placeholder"
+                android:contentDescription="@string/app_icon_desc" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:paddingLeft="16dp">
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
 
                 <TextView
                     android:id="@+id/app_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="App Name"
+                    android:text="@string/app_title"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -49,7 +54,7 @@
                     android:id="@+id/developer_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Developer Name"
+                    android:text="@string/developer_name"
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
@@ -59,25 +64,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/uninstall_button"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="UNINSTALL"
+                android:layout_marginEnd="8dp"
+                android:text="@string/uninstall_button"
                 android:textColor="@android:color/black"
-                android:background="@drawable/button_uninstall" />
+                android:background="?android:attr/buttonStyle"
+                android:contentDescription="@string/uninstall_button_desc" />
 
             <Button
                 android:id="@+id/open_button"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="OPEN"
+                android:layout_marginStart="8dp"
+                android:text="@string/open_button"
                 android:textColor="@android:color/white"
-                android:background="@drawable/button_open" />
+                android:background="?android:attr/buttonStyle"
+                android:contentDescription="@string/open_button_desc" />
         </LinearLayout>
 
         <!-- App Description -->
@@ -86,7 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="App description / unique value proposition" />
+            android:text="@string/app_description" />
 
         <!-- What's New -->
         <LinearLayout
@@ -99,19 +107,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="WHAT'S NEW"
+                android:text="@string/whats_new_title"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/whats_new_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Content goes here" />
+                android:text="@string/whats_new_content" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="READ MORE"
+                android:text="@string/read_more"
                 android:textColor="@color/link_color" />
         </LinearLayout>
 
@@ -119,7 +127,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="App Screenshots"
+            android:text="@string/app_screenshots_title"
             android:textSize="24sp"
             android:gravity="center"
             android:padding="16dp" />
@@ -130,9 +138,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="16dp">
-
             <!-- Add your screenshot views here -->
-
         </LinearLayout>
 
         <!-- Reviews -->
@@ -145,7 +151,7 @@
             android:id="@+id/all_reviews_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ALL REVIEWS"
+            android:text="@string/all_reviews_button"
             android:textColor="@color/link_color"
             android:background="?android:attr/selectableItemBackground"
             android:padding="16dp" />
@@ -161,14 +167,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DEVELOPER"
+                android:text="@string/developer_title"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/send_email_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Send email"
+                android:text="@string/send_email_button"
                 android:textColor="@color/link_color"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="8dp" />
@@ -177,7 +183,7 @@
                 android:id="@+id/permission_details_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Permission details"
+                android:text="@string/permission_details_button"
                 android:textColor="@color/link_color"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="8dp" />
@@ -186,7 +192,7 @@
                 android:id="@+id/flag_inappropriate_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Flag as inappropriate"
+                android:text="@string/flag_inappropriate_button"
                 android:textColor="@color/link_color"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="8dp" />

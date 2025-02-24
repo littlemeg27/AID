@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Fragments</string>
+    <string name="refresh">Refresh</string>
+    <string name="rotate_device">Please rotate your device to landscape mode</string>
+    <string name="name_hint">Enter name</string>
+    <string name="university_hint">Enter university</string>
+    <string name="id_hint">Enter ID</string>
+    <string name="grade_hint">Enter grade</string>
+    <string name="course_hint">Enter course</string>
+    <string name="program_hint">Enter program</string>
+    <string name="submit">Submit</string>
+    <string name="empty_state_message">No Data Available</string>
+    <string name="empty_state_submessage">Add some people using the form</string>
+</resources>
