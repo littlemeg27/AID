@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Styles&amp;Themes</string>
+    <string name="image_description">Decorative frame image</string>
+    <string name="placeholder_text">Placeholder</string>
+    <string name="background_color_label">Background Color:</string>
+    <string name="color_red">Red</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_green">Green</string>
+    <string name="enter_text_hint">Enter Text</string>
+    <string name="text_color_label">Text Color:</string>
+    <string name="bold_text_switch">Bold Text</string>
+    <string name="color_red_background">Red Background</string>
+    <string name="color_blue_background">Blue Background</string>
+    <string name="color_red_text">Red Text</string>
+    <string name="color_blue_text">Blue Text</string>
+    <string name="red_background_desc">Sets background to red</string>
+    <string name="blue_background_desc">Sets background to blue</string>
+    <string name="red_text_desc">Sets text color to red</string>
+    <string name="blue_text_desc">Sets text color to blue</string>
 </resources>
