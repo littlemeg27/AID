@@ -17,7 +17,8 @@ public class DataManager
         return people;
     }
 
-    public static void clear() {
+    public static void clear()
+    {
         people.clear();
     }
 }

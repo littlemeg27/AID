@@ -16,7 +16,7 @@ public abstract class Person
     @Override
     public String toString()
     {
-        return name + " | " + getType();
+        return name + " | " + getType(); // Ensure name is included
     }
 
     public abstract String getType();

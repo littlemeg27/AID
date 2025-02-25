@@ -10,6 +10,7 @@ import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
 
+
 public class AdministratorFormFragment extends Fragment
 {
     private static final String TAG = "AdministratorFormFragment";
@@ -30,7 +31,8 @@ public class AdministratorFormFragment extends Fragment
         EditText programInput = view.findViewById(R.id.program_input);
         Button submitButton = view.findViewById(R.id.submit_button);
 
-        submitButton.setOnClickListener(v -> {
+        submitButton.setOnClickListener(v ->
+        {
             String name = nameInput.getText().toString().trim();
             String university = universityInput.getText().toString().trim();
             String id = idInput.getText().toString().trim();
@@ -58,7 +60,6 @@ public class AdministratorFormFragment extends Fragment
     private void refreshList()
     {
         Fragment listFragment = getParentFragmentManager().findFragmentById(R.id.list_fragment_container);
-
         if (listFragment instanceof PeopleListFragment)
         {
             ((PeopleListFragment) listFragment).refreshList();

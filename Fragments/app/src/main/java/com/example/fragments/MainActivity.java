@@ -1,5 +1,6 @@
 package com.example.fragments;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,15 +13,20 @@ import androidx.fragment.app.Fragment;
 
 public class MainActivity extends AppCompatActivity
 {
-    private static final String[] CATEGORIES =
-            {
-            "Student", "Teacher", "Administrator"
-    };
+    private static final String[] CATEGORIES = {"Student", "Teacher", "Administrator"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+        int orientation = getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT)
+        {
+            setContentView(R.layout.activity_main);
+            return;
+        }
+
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -29,8 +35,7 @@ public class MainActivity extends AppCompatActivity
         Spinner spinner = findViewById(R.id.category_spinner);
         Button refreshButton = findViewById(R.id.refresh_button);
 
-        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_spinner_item, CATEGORIES);
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, CATEGORIES);
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(spinnerAdapter);
 
@@ -77,6 +82,7 @@ public class MainActivity extends AppCompatActivity
         {
             PeopleListFragment listFragment = (PeopleListFragment) getSupportFragmentManager()
                     .findFragmentById(R.id.list_fragment_container);
+
             if (listFragment != null)
             {
                 listFragment.refreshList();

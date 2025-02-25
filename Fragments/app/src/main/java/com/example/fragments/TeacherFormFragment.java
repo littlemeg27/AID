@@ -30,7 +30,8 @@ public class TeacherFormFragment extends Fragment
         EditText courseInput = view.findViewById(R.id.course_input);
         Button submitButton = view.findViewById(R.id.submit_button);
 
-        submitButton.setOnClickListener(v -> {
+        submitButton.setOnClickListener(v ->
+        {
             String name = nameInput.getText().toString().trim();
             String university = universityInput.getText().toString().trim();
             String id = idInput.getText().toString().trim();

@@ -1,6 +1,7 @@
 package com.example.fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +11,6 @@ import androidx.fragment.app.Fragment;
 
 public class StudentFormFragment extends Fragment
 {
-    private static final String TAG = "StudentFormFragment";
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -26,20 +25,24 @@ public class StudentFormFragment extends Fragment
         submitButton.setOnClickListener(v ->
         {
             String name = nameInput.getText().toString().trim();
-            if (!name.isEmpty() && !universityInput.getText().toString().trim().isEmpty() && !idInput.getText().toString().trim().isEmpty() && !gradeInput.getText().toString().trim().isEmpty())
+            String university = universityInput.getText().toString().trim();
+            String id = idInput.getText().toString().trim();
+            String grade = gradeInput.getText().toString().trim();
+
+            if (!name.isEmpty() && !university.isEmpty() && !id.isEmpty() && !grade.isEmpty())
             {
-                Student student = new Student(
-                        name,
-                        universityInput.getText().toString(),
-                        idInput.getText().toString(),
-                        gradeInput.getText().toString()
-                );
+                Student student = new Student(name, university, id, grade);
                 DataManager.addPerson(student);
+                Log.d("StudentForm", "Added student: " + student.toString());
                 nameInput.setText("");
                 universityInput.setText("");
                 idInput.setText("");
                 gradeInput.setText("");
                 refreshList();
+            }
+            else
+            {
+                Log.d("StudentForm", "Empty fields detected");
             }
         });
 
@@ -51,8 +54,12 @@ public class StudentFormFragment extends Fragment
         Fragment listFragment = getParentFragmentManager().findFragmentById(R.id.list_fragment_container);
         if (listFragment instanceof PeopleListFragment)
         {
-            PeopleListFragment peopleListFragment = (PeopleListFragment) listFragment;
-            peopleListFragment.refreshList();
+            ((PeopleListFragment) listFragment).refreshList();
+            Log.d("StudentForm", "Refresh called");
+        }
+        else
+        {
+            Log.d("StudentForm", "ListFragment not found");
         }
     }
 }
