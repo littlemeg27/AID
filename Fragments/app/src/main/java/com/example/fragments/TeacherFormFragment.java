@@ -1,13 +1,12 @@
 package com.example.fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import com.example.fragments.Student;
-import com.example.fragments.DataManager;
 
 import androidx.fragment.app.Fragment;
 
@@ -17,7 +16,7 @@ public class TeacherFormFragment extends Fragment
 
     public TeacherFormFragment()
     {
-
+        // Required empty public constructor
     }
 
     @Override
@@ -31,8 +30,7 @@ public class TeacherFormFragment extends Fragment
         EditText courseInput = view.findViewById(R.id.course_input);
         Button submitButton = view.findViewById(R.id.submit_button);
 
-        submitButton.setOnClickListener(v ->
-        {
+        submitButton.setOnClickListener(v -> {
             String name = nameInput.getText().toString().trim();
             String university = universityInput.getText().toString().trim();
             String id = idInput.getText().toString().trim();
@@ -42,6 +40,7 @@ public class TeacherFormFragment extends Fragment
             {
                 Teacher teacher = new Teacher(name, university, id, course);
                 DataManager.addPerson(teacher);
+                Log.d(TAG, "Teacher added: " + name);
 
                 nameInput.setText("");
                 universityInput.setText("");
@@ -57,8 +56,8 @@ public class TeacherFormFragment extends Fragment
 
     private void refreshList()
     {
-        Fragment listFragment = getParentFragmentManager()
-                .findFragmentById(R.id.list_fragment_container);
+        Fragment listFragment = getParentFragmentManager().findFragmentById(R.id.list_fragment_container);
+
         if (listFragment instanceof PeopleListFragment)
         {
             ((PeopleListFragment) listFragment).refreshList();

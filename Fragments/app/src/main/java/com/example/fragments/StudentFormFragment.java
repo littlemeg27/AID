@@ -7,8 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.fragment.app.Fragment;
-import com.example.fragments.Student;
-import com.example.fragments.DataManager;
 
 public class StudentFormFragment extends Fragment
 {
@@ -27,23 +25,33 @@ public class StudentFormFragment extends Fragment
 
         submitButton.setOnClickListener(v ->
         {
-            Student student = new Student(
-                    nameInput.getText().toString(),
-                    universityInput.getText().toString(),
-                    idInput.getText().toString(),
-                    gradeInput.getText().toString()
-            );
-            DataManager.addPerson(student);
-            refreshList();
+            String name = nameInput.getText().toString().trim();
+            if (!name.isEmpty() && !universityInput.getText().toString().trim().isEmpty() && !idInput.getText().toString().trim().isEmpty() && !gradeInput.getText().toString().trim().isEmpty())
+            {
+                Student student = new Student(
+                        name,
+                        universityInput.getText().toString(),
+                        idInput.getText().toString(),
+                        gradeInput.getText().toString()
+                );
+                DataManager.addPerson(student);
+                nameInput.setText("");
+                universityInput.setText("");
+                idInput.setText("");
+                gradeInput.setText("");
+                refreshList();
+            }
         });
 
         return view;
     }
+
     private void refreshList()
     {
         Fragment listFragment = getParentFragmentManager().findFragmentById(R.id.list_fragment_container);
-        if (listFragment instanceof PeopleListFragment peopleListFragment)
+        if (listFragment instanceof PeopleListFragment)
         {
+            PeopleListFragment peopleListFragment = (PeopleListFragment) listFragment;
             peopleListFragment.refreshList();
         }
     }

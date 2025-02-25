@@ -1,15 +1,12 @@
 package com.example.fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import com.example.fragments.Student;
-import com.example.fragments.DataManager;
-import com.example.fragments.Student;
-import com.example.fragments.DataManager;
 
 import androidx.fragment.app.Fragment;
 
@@ -25,7 +22,6 @@ public class AdministratorFormFragment extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-
         View view = inflater.inflate(R.layout.fragment_administrator_form, container, false);
 
         EditText nameInput = view.findViewById(R.id.name_input);
@@ -34,8 +30,7 @@ public class AdministratorFormFragment extends Fragment
         EditText programInput = view.findViewById(R.id.program_input);
         Button submitButton = view.findViewById(R.id.submit_button);
 
-        submitButton.setOnClickListener(v ->
-        {
+        submitButton.setOnClickListener(v -> {
             String name = nameInput.getText().toString().trim();
             String university = universityInput.getText().toString().trim();
             String id = idInput.getText().toString().trim();
@@ -45,6 +40,8 @@ public class AdministratorFormFragment extends Fragment
             {
                 Administrator administrator = new Administrator(name, university, id, program);
                 DataManager.addPerson(administrator);
+
+                Log.d(TAG, "Administrator added: " + name);
 
                 nameInput.setText("");
                 universityInput.setText("");
@@ -60,8 +57,8 @@ public class AdministratorFormFragment extends Fragment
 
     private void refreshList()
     {
-        Fragment listFragment = getParentFragmentManager()
-                .findFragmentById(R.id.list_fragment_container);
+        Fragment listFragment = getParentFragmentManager().findFragmentById(R.id.list_fragment_container);
+
         if (listFragment instanceof PeopleListFragment)
         {
             ((PeopleListFragment) listFragment).refreshList();

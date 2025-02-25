@@ -1,20 +1,23 @@
 package com.example.fragments;
 
-import com.example.fragments.model.Student;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DataManager
 {
-    private static final List<Student> people = new ArrayList<>();
+    private static final List<Person> people = new ArrayList<>();
 
-    public static void addPerson(Student student)
+    public static void addPerson(Person person)
     {
-        people.add(student);
+        people.add(person);
     }
 
-    public static List<Student> getPeople()
+    public static List<Person> getPeople()
     {
         return people;
+    }
+
+    public static void clear() {
+        people.clear();
     }
 }

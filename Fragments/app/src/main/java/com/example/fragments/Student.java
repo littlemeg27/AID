@@ -1,29 +1,18 @@
 package com.example.fragments;
 
-public class Student
+public class Student extends Person
 {
-    private String name;
-    private String university;
-    private String id;
-    private String grade;
+    private final String grade;
 
     public Student(String name, String university, String id, String grade)
     {
-        this.name = name;
-        this.university = university;
-        this.id = id;
+        super(name, university, id);
         this.grade = grade;
     }
 
-    // Getters (add setters if needed)
-    public String getName() { return name; }
-    public String getUniversity() { return university; }
-    public String getId() { return id; }
-    public String getGrade() { return grade; }
-
     @Override
-    public String toString()
+    public String getType()
     {
-        return name; // For display in PeopleListFragment
+        return "Student";
     }
 }

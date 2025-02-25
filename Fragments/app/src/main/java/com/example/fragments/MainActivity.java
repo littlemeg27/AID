@@ -12,7 +12,8 @@ import androidx.fragment.app.Fragment;
 
 public class MainActivity extends AppCompatActivity
 {
-    private static final String[] CATEGORIES = {
+    private static final String[] CATEGORIES =
+            {
             "Student", "Teacher", "Administrator"
     };
 
@@ -76,7 +77,8 @@ public class MainActivity extends AppCompatActivity
         {
             PeopleListFragment listFragment = (PeopleListFragment) getSupportFragmentManager()
                     .findFragmentById(R.id.list_fragment_container);
-            if (listFragment != null) {
+            if (listFragment != null)
+            {
                 listFragment.refreshList();
             }
         });
