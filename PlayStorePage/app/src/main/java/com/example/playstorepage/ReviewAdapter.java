@@ -40,10 +40,10 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewView
     {
         Review review = reviewList.get(position);
         holder.userNameTextView.setText(review.getUserName());
-        holder.reviewTitleTextView.setText(review.getTitle());
-        holder.reviewTextTextView.setText(review.getReviewText());
         holder.ratingTextView.setText(String.valueOf(review.getRating()));
         holder.reviewDateTextView.setText(review.getReviewDate());
+        holder.reviewTitleTextView.setText(review.getTitle());
+        holder.reviewTextTextView.setText(review.getReviewText());
     }
 
     @Override
@@ -55,19 +55,19 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewView
     public static class ReviewViewHolder extends RecyclerView.ViewHolder
     {
         TextView userNameTextView;
-        TextView reviewTitleTextView;
-        TextView reviewTextTextView;
         TextView ratingTextView;
         TextView reviewDateTextView;
+        TextView reviewTitleTextView;
+        TextView reviewTextTextView;
 
         public ReviewViewHolder(View itemView)
         {
             super(itemView);
             userNameTextView = itemView.findViewById(R.id.review_user);
-            reviewTitleTextView = itemView.findViewById(R.id.review_title);
-            reviewTextTextView = itemView.findViewById(R.id.review_summary);
             ratingTextView = itemView.findViewById(R.id.review_rating);
             reviewDateTextView = itemView.findViewById(R.id.review_date);
+            reviewTitleTextView = itemView.findViewById(R.id.review_title);
+            reviewTextTextView = itemView.findViewById(R.id.review_summary);
         }
     }
 }

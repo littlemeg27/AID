@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements ContactFormListen
 
         fab = findViewById(R.id.fab);
 
-        // Initial fragment (ListFragment or EmptyState if no contacts)
         if (savedInstanceState == null)
         {
             loadInitialFragment();
@@ -40,6 +39,11 @@ public class MainActivity extends AppCompatActivity implements ContactFormListen
                     .commit();
             fab.hide();
         });
+    }
+
+    public List<Contact> getContacts()
+    {
+        return contacts;
     }
 
     private void loadInitialFragment()
@@ -65,12 +69,13 @@ public class MainActivity extends AppCompatActivity implements ContactFormListen
     public void onBackFromDetails()
     {
         getSupportFragmentManager().popBackStack();
-        fab.show();
     }
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed()
+    {
         Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+
         if (currentFragment instanceof ContactFormFragment || currentFragment instanceof ContactDetailsFragment)
         {
             fab.show();

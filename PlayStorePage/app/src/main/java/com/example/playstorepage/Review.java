@@ -6,29 +6,28 @@ package com.example.playstorepage;
 
 public class Review
 {
-    private String reviewText;
     private String userName;
     private int rating;
     private String reviewDate;
     private String title;
+    private String reviewText;
 
-    // Constructor with all fields
-    public Review(String userName, String title, int rating, String reviewDate, String reviewText)
+    public Review(String userName, int rating, String reviewDate, String title,  String reviewText)
     {
         this.userName = userName;
-        this.title = title;
         this.rating = rating;
         this.reviewDate = reviewDate;
+        this.title = title;
         this.reviewText = reviewText;
     }
 
     public Review(String reviewText, int rating)
     {
-        this.reviewText = reviewText;
-        this.rating = rating;
         this.userName = "Unknown";
+        this.rating = rating;
         this.reviewDate = "Unknown";
         this.title = "No Title";
+        this.reviewText = reviewText;
     }
 
     // Getter methods

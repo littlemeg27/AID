@@ -1,6 +1,8 @@
 package com.example.fragmentcommunicationanimation;
 
-public class Contact
+import java.io.Serializable;
+
+public class Contact implements Serializable
 {
     private String firstName;
     private String lastName;
@@ -20,6 +22,6 @@ public class Contact
     @Override
     public String toString()
     {
-        return firstName + " " + lastName; // For display in ListFragment
+        return firstName + " " + lastName;
     }
 }

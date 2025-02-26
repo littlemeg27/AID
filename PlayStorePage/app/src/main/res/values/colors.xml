@@ -10,5 +10,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="developer_section_background">#F0F0F0</color>
     <color name="whats_new_background">#E8F5E9</color>
-    <color name="link_color">#link_color</color>
+    <color name="link_color">@color/colorPrimaryVariant</color>
 </resources>

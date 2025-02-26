@@ -74,7 +74,6 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/uninstall_button"
                 android:textColor="@android:color/black"
-                android:background="?android:attr/buttonStyle"
                 android:contentDescription="@string/uninstall_button_desc" />
 
             <Button
@@ -84,7 +83,6 @@
                 android:layout_marginStart="8dp"
                 android:text="@string/open_button"
                 android:textColor="@android:color/white"
-                android:background="?android:attr/buttonStyle"
                 android:contentDescription="@string/open_button_desc" />
         </LinearLayout>
 

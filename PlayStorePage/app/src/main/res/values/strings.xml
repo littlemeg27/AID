@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">PlayStorePage</string>
-    <string name="developer_name">Developer Name</string>
-    <string name="app_description">App description / unique value proposition</string>
+    <string name="developer_name">Raven Margaret</string>
+    <string name="app_description">HabitForge is a powerful yet simple habit-tracking app designed to help users build and maintain positive routines effortlessly. Whether you want to exercise more, read daily, drink more water, or learn a new skill, HabitForge provides the perfect platform to stay motivated and on track.</string>
     <string name="whats_new_title">WHAT\'S NEW</string>
-    <string name="whats_new_content">Content goes here</string>
+    <string name="whats_new_content">Custom Habit Creation – Set up daily, weekly, or monthly habits with personalized reminders. Streak Tracking – Visualize your progress with a streak counter to keep your motivation high. </string>
     <string name="read_more">READ MORE</string>
     <string name="app_screenshots_title">App Screenshots</string>
     <string name="all_reviews_button">ALL REVIEWS</string>
-    <string name="developer_title">DEVELOPER</string>
-    <string name="send_email_button">Send email</string>
+    <string name="developer_title">Raven Margaret</string>
+    <string name="send_email_button">RavenMobileDesign@icloud.com</string>
     <string name="permission_details_button">Permission details</string>
     <string name="flag_inappropriate_button">Flag as inappropriate</string>
     <string name="uninstall_button">UNINSTALL</string>
@@ -22,5 +22,5 @@
     <string name="review_title_placeholder">Review Title</string>
     <string name="review_summary_placeholder">Review Summary</string>
     <string name="review_rating_placeholder">Rating</string>
-    <string name="app_title">New App!</string>
+    <string name="app_title">Habit Forge</string>
 </resources>

@@ -41,13 +41,17 @@ public class ContactDetailsFragment extends Fragment
         TextView phoneText = view.findViewById(R.id.phone_text);
         Button backButton = view.findViewById(R.id.back_button);
 
-        nameText.setText(contact.getFirstName() + " " + contact.getLastName());
+        String formatString = getString(R.string.contact_name_format);
+        nameText.setText(String.format(formatString, contact.getFirstName(), contact.getLastName()));
         phoneText.setText(contact.getPhoneNumber());
 
         backButton.setOnClickListener(v ->
         {
-            ContactDetailsListener listener = (ContactDetailsListener) getActivity();
-            listener.onBackFromDetails();
+            if (getActivity() instanceof ContactDetailsListener)
+            {
+                ContactDetailsListener listener = (ContactDetailsListener) getActivity();
+                listener.onBackFromDetails();
+            }
         });
 
         return view;

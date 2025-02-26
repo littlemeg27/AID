@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+    tools:ignore="MissingDefaultResource">
+
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_hint"
+        android:inputType="textPersonName"
+        android:autofillHints="name" />
+
+    <EditText
+        android:id="@+id/university_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/university_hint"
+        android:inputType="text"
+        android:autofillHints="organization" />
+
+    <EditText
+        android:id="@+id/id_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/id_hint"
+        android:inputType="text"
+        android:autofillHints="username" />
+
+    <EditText
+        android:id="@+id/grade_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/grade_hint"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"
+        android:text="@string/submit"
+        android:textSize="16sp" />
+
+</LinearLayout>
