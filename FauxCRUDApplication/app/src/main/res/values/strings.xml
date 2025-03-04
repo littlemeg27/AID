@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Faux CRUD Application</string>
+    <string name="add_item">Add Item</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+    <string name="no_data">No Items Available</string>
+    <string name="delete_prompt">Are you sure you want to delete this item?</string>
+    <string name="delete_confirm">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="item_deleted">Item deleted</string>
+    <string name="name_hint">Name</string>
+    <string name="name_label">Name</string>
+    <string name="description_hint">Description</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="phone_label">Phone Number</string>
+    <string name="category_label">Select Category</string>
+    <string name="category_vegetarian">Vegetarian</string>
+    <string name="category_gluten_free">Gluten Free</string>
+    <string name="category_vegan">Vegan</string>
+    <string name="category_pescatarian">Pescatarian</string>
+</resources>
